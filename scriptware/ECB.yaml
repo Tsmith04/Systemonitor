@@ -1,0 +1,36 @@
+Request:
+  - name: reqVld
+    size: 1 bit
+    description: Describes whether the request being sent is valid or not
+    bit_offset: "44"
+
+  - name: SID
+    size: 8 bits
+    description: Sensor ID that describes the type of the target sensor
+    bit_offset: "43-36"
+
+  - name: cmdType
+    size: 4 bits
+    description: Command Type of the request to the sensor
+    bit_offset: "35-32"
+
+  - name: CtlData
+    size: 32 bits
+    description: Data that is to be sent to the sensor to perform the desired action
+    bit_offset: "31-0"
+
+Response:
+  - name: respVld
+    size: 1 bit
+    description: Describes whether the response being sent is valid or not
+    bit_offset: "40"
+
+  - name: SID
+    size: 8 bits
+    description: Sensor ID that describes the type of the target sensor
+    bit_offset: "39-32"
+  
+  - name: respData
+    size: 32 bits
+    description: Data that is to be sent from the sensor to the control hub
+    bit_offset: "31-0"
